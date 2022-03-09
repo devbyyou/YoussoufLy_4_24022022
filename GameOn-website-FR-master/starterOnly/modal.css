@@ -10,6 +10,25 @@
 }
 /* Landing Page */
 
+.text-danger{
+  color:#e54858;
+  
+
+  
+  font-size: 0.4em;
+  color: #e54858;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: left;
+  line-height: 0.3;
+  transition: 0.3s;
+}
+.text-success{
+  color:rgb(21, 179, 21);
+  font-size: 10px;
+
+}
+
 body {
   margin: 0;
   display: flex;
@@ -88,17 +107,29 @@ img {
     display: block;
     text-align: left;
   }
+
 }
 
 
 
  @media screen and (max-width: 540px) {
+
+
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
+  .content{
+    position: absolute;
+    top: 90px;
+  }
+
+  .bground{   
+    background-color:inherit; 
+  }
+
 } 
 
 main {
