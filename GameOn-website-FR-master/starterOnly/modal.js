@@ -14,6 +14,10 @@ const formData = document.querySelectorAll(".formData");
 //
 const closeBtn = document.querySelector(".close");
 
+
+const modalThanks = document.querySelector(".booking-thanks");
+const openModal = document.querySelectorAll(".openModal");
+const modal = document.getElementById("modal");
 //-------  fermer le modal
 closeBtn.addEventListener("click", closeModal);
 
@@ -167,7 +171,7 @@ let br = inputEmail.nextElementSibling;
       if (testEmail) {
           br.innerHTML = "L'adresse électronique est valide";
           br.classList.remove('text-danger');
-           br.classList.add("text-success");
+          br.classList.add("text-success");
          return true;
         }else{
         br.innerHTML = "L'adresse électronique n'est pas valide";
@@ -242,3 +246,55 @@ const validateTown = function() {
       return true;
     }
   }
+
+
+  //--------------------------------------SUBMIT-----------------------------------------------------------
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+validEmail(form.email);
+validFirst(form.first);
+validLast(form.last);
+validQuantity(form.quantity);
+validBirthdate(form.birthdate);
+validateTown();
+validateTermCondition();
+
+
+
+
+      if(validEmail(form.email) 
+      && validQuantity(form.quantity) 
+      && validLast(form.last) 
+      && validBirthdate(form.birthdate) 
+      && validFirst(form.first)
+      && validateTown()
+      && validateTermCondition()
+      ){
+
+          // form.submit();
+               
+        form.style.display = "none";
+        modalThanks.style.display = "block";
+
+      }
+
+});
+
+
+/**
+ * Show field error
+ * @param {HTMLElement} el
+ */
+ function showFieldError(el) {
+  el.closest('.formData').dataset.errorVisible = 'true';
+}
+
+/**
+ * Hide field error
+ * @param {HTMLElement} el
+ */
+ function hideFieldError(el) {
+  el.closest('.formData').dataset.errorVisible = 'null';
+}
+
+
