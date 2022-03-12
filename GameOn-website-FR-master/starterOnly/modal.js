@@ -297,4 +297,11 @@ validateTermCondition();
   el.closest('.formData').dataset.errorVisible = 'null';
 }
 
+/**
+ * Show Modal form
+ */
+ function showModalForm() {
+  modalThanks.style.display = 'none';
+  form.style.display = '';
+}
 
