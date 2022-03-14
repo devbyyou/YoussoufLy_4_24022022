@@ -14,8 +14,27 @@ const formData = document.querySelectorAll(".formData");
 //
 const closeBtn = document.querySelector(".close");
 
+//-------------------modal_succes----------------------------
+const modalSuccess = document.querySelector(".modal-success");
+const modalCloseBtn2 = document.querySelector(".close2");
+const successMessageBtn = document.querySelector(".btn-success");
+modalCloseBtn = document.querySelector(".close");
 
-const modalThanks = document.querySelector(".booking-thanks");
+
+
+function closeModalSuccess() {
+  modalbg.style.display = "none";
+  modalSuccess.style.display = "none";
+  mainForm.reset();
+}
+modalCloseBtn2.addEventListener("click", closeModalSuccess);
+successMessageBtn.addEventListener("click", closeModalSuccess);
+modalCloseBtn.addEventListener("click", closeModal);
+
+//-----------------------------------------------
+
+
+
 const openModal = document.querySelectorAll(".openModal");
 const modal = document.getElementById("modal");
 //-------  fermer le modal
@@ -274,7 +293,7 @@ validateTermCondition();
           // form.submit();
                
         form.style.display = "none";
-        modalThanks.style.display = "block";
+        modalSuccess.style.display = "block";
 
       }
 

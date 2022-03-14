@@ -121,14 +121,16 @@ img {
     display: block;
     margin-top: -15px;
   }
-  .content{
+  /* .content{
     position: absolute;
     top: 90px;
     
-  }
+  } */
 
   .bground{   
     background-color:inherit; 
+    height: 90vh;
+        top: 65px;
   }
 
 } 
@@ -204,7 +206,6 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
-  height: 112.5vh;
   max-width: 500px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
@@ -259,6 +260,34 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
+
+.modal-success {
+  display:  none;
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #232323;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  margin: 15px auto;
+  padding: 50% 20px 10%;
+}
+
+/* content for message success */
+.success-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+}
+
 /* 
 input[data-error]::after {
     content: attr(data-error);
@@ -329,7 +358,8 @@ input[data-error]::after {
   left: 21%;
   top: 19%;
 }
-.close {
+.close,
+.close2 {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -356,7 +386,7 @@ input[data-error]::after {
 }
 .btn-submit,
 .btn-signup,
-.btn-close {
+.btn-success {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -562,35 +592,3 @@ footer {
 }
 
 
-.booking-thanks{
-  display: none;
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%,-50%)
-}
-
-#loginForm{
-  display: block;
-}
-
-.booking-thanks-message{
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-#merci{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: -100px;
-}
-
-.text-merci{
-  margin-top: -20px;
-}
-.btn-close{
-  display:flex;
-  justify-content: center;
-  align-items: flex-end;
-}
