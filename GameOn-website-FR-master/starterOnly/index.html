@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Reservation</title>
+    <title>YReservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,11 +12,11 @@
     />
   </head>
   <body>
-    <div class="topnav" id="myTopnav">
+    <header class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
-    </div>
-    <div class="main-navbar">
+      <img alt="logo" src="Logo.png"  />
+      </div>
+     <div class="main-navbar">
       
       <a href="#" class="active"><span>Accueil</span></a>
       <a href="#"><span>Détails de l'évènement</span></a>
@@ -24,12 +24,13 @@
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Évènements passés</span></a>
 
-     <!-- <a href="javascript:void(0);" class="icon" onclick="editNav()">
+     <a href="javascript:void(0);" class="icon" onclick="editNav()">
         <i class="fa fa-bars"></i>  
-      </a> -->
-    </div>
-    </div>
-  </div>
+
+      </a> 
+     </div>
+     
+    </header>
     <main>
       <div class="hero-section">
         <div class="hero-content">
@@ -57,9 +58,7 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <form
-
-              name="reserve"  method="post" id="loginForm"  novalidate>
+            <form name="reserve"  method="post" class="main-form"  novalidate>
 
               <div
                 class="formData">
@@ -189,7 +188,7 @@
                   name="terms"
                   checked
                 />
-                <label class="checkbox2-label" for="terms" required>
+                <label class="checkbox2-label" for="terms" >
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -202,9 +201,8 @@
                 <br>
               </div>
               <input
-                class="btn-submit"
+                class="btn-submit button"
                 type="submit"
-                class="button"
                 value="C'est parti"
               />
               

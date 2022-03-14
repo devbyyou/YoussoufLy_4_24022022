@@ -12,13 +12,14 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 //
-const closeBtn = document.querySelector(".close");
+// const closeBtn = document.querySelector(".close");
 
 //-------------------modal_succes----------------------------
 const modalSuccess = document.querySelector(".modal-success");
 const modalCloseBtn2 = document.querySelector(".close2");
 const successMessageBtn = document.querySelector(".btn-success");
-modalCloseBtn = document.querySelector(".close");
+const modalCloseBtn = document.querySelector(".close");
+const mainForm = document.querySelector(".main-form");
 
 
 
@@ -27,8 +28,27 @@ function closeModalSuccess() {
   modalSuccess.style.display = "none";
   mainForm.reset();
 }
-modalCloseBtn2.addEventListener("click", closeModalSuccess);
-successMessageBtn.addEventListener("click", closeModalSuccess);
+
+modalCloseBtn.addEventListener("click", function(){
+  console.log(modalCloseBtn)
+  closeModalSuccess();
+  
+  });
+
+
+
+modalCloseBtn2.addEventListener("click", function(){
+  
+closeModalSuccess();
+location.reload();
+
+});
+
+successMessageBtn.addEventListener("click", function(){
+closeModalSuccess();
+ location.reload();
+});
+
 modalCloseBtn.addEventListener("click", closeModal);
 
 //-----------------------------------------------
@@ -38,7 +58,7 @@ modalCloseBtn.addEventListener("click", closeModal);
 const openModal = document.querySelectorAll(".openModal");
 const modal = document.getElementById("modal");
 //-------  fermer le modal
-closeBtn.addEventListener("click", closeModal);
+// closeBtn.addEventListener("click", closeModal);
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -59,7 +79,7 @@ function closeModal() {
 
 
 
-let form = document.querySelector('#loginForm');
+let form = document.querySelector('.main-form');
 //Ecouter la modification du prenom
 form.first.addEventListener('change', function() {
   validFirst(this);
