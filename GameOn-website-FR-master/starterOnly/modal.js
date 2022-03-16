@@ -26,7 +26,7 @@ const mainForm = document.querySelector(".main-form");
 function closeModalSuccess() {
   modalbg.style.display = "none";
   modalSuccess.style.display = "none";
-  mainForm.reset();
+  // mainForm.reset();
 }
 
 modalCloseBtn.addEventListener("click", function(){
